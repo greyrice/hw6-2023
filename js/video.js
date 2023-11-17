@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
 	video.loop = false
 	console.log("Loop is set to false");
 	video.autoplay = false
-	
+	document.getElementById('slider').style.backgroundColor = "blue"
 });
 
 document.querySelector("#play").addEventListener("click", function() {
@@ -43,9 +43,11 @@ document.querySelector("#skip").addEventListener("click", function() {
 document.querySelector("#mute").addEventListener("click", function() {
 	
 	if(video.muted == true){
+		document.getElementById("mute").innerHTML = "mute"
 		video.muted = false;
 		console.log("unmute Video");
 	}else{
+		document.getElementById("mute").innerHTML = "Unmute"
 		video.muted = true;
 		console.log("mute Video");
 	}
@@ -62,10 +64,12 @@ document.querySelector("#slider").addEventListener("input",function(){
 
 document.querySelector("#vintage").addEventListener("click",function(){
 	
-	video.style.filter = "grayscale(100%)"
+	
+	video.classList.toggle("oldSchool")
+	
 })
 
 document.querySelector("#orig").addEventListener("click",function(){
 	
-	video.style.filter = "none"
+	video.classList.remove("oldSchool")
 })
