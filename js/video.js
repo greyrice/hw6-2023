@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
 	video.loop = false
 	console.log("Loop is set to false");
 	video.autoplay = false
-	document.getElementById('slider').style.backgroundColor = "blue"
+	
 });
 
 document.querySelector("#play").addEventListener("click", function() {
