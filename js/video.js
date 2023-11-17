@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
 	console.log("Good job opening the window");
 	video.loop = false
 	console.log("Loop is set to false");
-	video.autoplay = true
+	video.autoplay = false
 	
 });
 
